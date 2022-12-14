@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.secret.name }}
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: {{ .Values.labels.app }}
+type: Opaque
+data:
+  DB_USER: ZGV2b3BzY2lsc3k=
+  DB_PASS: MTIzNDU2Nzg5MA==
+  MYSQL_ROOT_PASSWORD: MTIzNDU2Nzg5MA==
